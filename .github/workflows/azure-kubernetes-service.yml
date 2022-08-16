@@ -27,7 +27,7 @@ jobs:
                 tenant-id: ${{ secrets.AZURE_TENANT_ID }}
             - name: Build and push image to ACR
               run: |
-                sudo apt-get install python3.7; python -m pip install --upgrade pip;
+                sudo which python3;
                 az acr build --image ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }} --registry ${{ env.AZURE_CONTAINER_REGISTRY }} -g ${{ env.RESOURCE_GROUP }} .
     createSecret:
         permissions:
