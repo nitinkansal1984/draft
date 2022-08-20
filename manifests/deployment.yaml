@@ -18,9 +18,10 @@ spec:
         app: myapp
     spec:
       containers:
-      - image: mycontainerregistry1608.azurecr.io.azurecr.io/myapp
+      - image: mycontainerregistry1608.azurecr.io/myapp
         name: myapp
         ports:
         - containerPort: 80
         resources: {}
+status: {}
 status: {}
