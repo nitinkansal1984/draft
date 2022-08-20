@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.7.3-stretch
 ENV PORT 80
 EXPOSE 80
 WORKDIR /usr/src/app
